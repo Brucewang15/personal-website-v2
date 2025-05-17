@@ -12,7 +12,7 @@ export default function GradientText({
     return (
         <span
             className={cn(
-                "inline-block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+                "inline-block bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent",
                 className,
             )}
         >
