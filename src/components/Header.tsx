@@ -3,6 +3,7 @@
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import GradientText from "./effects/GradientText";
+import { Button } from "./ui/button";
 
 export default function Header() {
     const { theme, setTheme } = useTheme();
@@ -11,7 +12,7 @@ export default function Header() {
         setTheme(theme === "dark" ? "light" : "dark");
     };
 
-    const header_options = ['Experience', 'Projects', 'About Me', 'Contact', 'Resume'];
+    const header_options = ['Home', 'Blog', 'Resume'];
 
     return (
         <header className="
@@ -19,10 +20,10 @@ export default function Header() {
             backdrop-blur-md z-50 top-4 md:top-8 md:left-8 md:right-8
             bg-white/80 dark:bg-stone-950/70 mx-auto
             flex flex-col 
-            max-w-screen-xl
+            max-w-screen-lg
             "
         >
-            <div className="flex h-12 w-fullitems-stretch justify-between px-4">
+            <div className="flex h-12 w-fullitems-stretch justify-between px-6">
                 <div className="flex items-center gap-x-4">
                     <Link
                         href="/"
@@ -44,7 +45,11 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div className="">hi</div>
+                <div className="flex items-center gap-x-2">
+                    <Button>
+                        hi
+                    </Button>
+                </div>
 
             </div>
         </header>
